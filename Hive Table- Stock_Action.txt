@@ -1,0 +1,5 @@
+create external table stock_action(Company varchar(30),Trade_Dt date,Prev_close double(10,3),Open double(10,3),High double(10,3),Low double(10,3),Close double(10,3),Volume int)
+row format delimited
+fields terminated by ','
+location '/user/hive/warehouse/Trade.db/files'
+tblproperties ("skip.header.line.count"="1");

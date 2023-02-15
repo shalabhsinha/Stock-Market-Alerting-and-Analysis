@@ -1,0 +1,13 @@
+Start Kafka:
+C:\kafka_2.12-3.1.0>kafka-server-start.bat config\server.properties
+Start Zookeeper:
+C:\kafka_2.12-3.1.0>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Create a topic where the Producer can write and Consumer can subscribe to:
+kafka-topics --bootstrap-server localhost:9092 --topic zen --create --partition 3 --replication-factor 1
+
+Starts a producer in a console which writes the messages in to zen
+kafka-console-producer --broker-list localhost:9092 --topic zen
+
+Starts a consumer in a console which subscribe to topic - zen
+kafka-console-consumer --bootstrap-server localhost:9092 --topic zen
