@@ -1,4 +1,6 @@
 # Stock-Market-Alerting-and-Analysis
+Project to demo Realtime data analysis and batch processing for analytics
+
 A realtime alerting system for Indian Stock Market which generates alerts based on LTP(Last Traded Price) and loads a DataWarehouse for generating reports and data analytics for BI by creating a Data Pipeline.
 Structure of the project goes like:
 We have Kafka for streaming the realtime data from the MoneyControl website. 
